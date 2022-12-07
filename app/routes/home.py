@@ -1,22 +1,15 @@
-from flask import Blueprint, render_template, session, redirect, jsonify
+from flask import Blueprint, render_template, session, redirect
 from app.models import Post
 from app.db import get_db
-import sys
 
 bp = Blueprint('home', __name__, url_prefix='/')
 
 @bp.route('/')
 def index():
     # get all post
- try:
     db = get_db()
     posts = db.query(Post).order_by(Post.created_at.desc()).all()
-    render_template("homepage.html", posts=posts, loggedIn=session.get("loggedIn"))
- except:
-      print(sys.exc_info()[0])
-  # insert failed, so rollback and send error to front end
-      db.rollback()
-      return jsonify(message = 'render fail'), 500
+    return render_template("homepage.html", posts=posts, loggedIn=session.get("loggedIn"))
 
 @bp.route('/login')
 def login():
