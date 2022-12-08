@@ -12,9 +12,6 @@ def create_app(test_config=None):
     app.jinja_env.filters['format_date'] = filters.format_date
     app.jinja_env.filters['format_plural'] = filters.format_plural
     
-    @app.route('/')
-    def index():
-        return redirect('/home')
     
     # register routes
     app.register_blueprint(home)
