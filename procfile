@@ -1,3 +1,7 @@
 # set up Procfile for python
 
-web: gunicorn app:app
+
+web: gunicorn "app:create_app()"
+ 
+
+

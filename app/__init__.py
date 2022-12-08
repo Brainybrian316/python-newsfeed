@@ -1,5 +1,5 @@
 from flask import Flask
-from app.routes import home, dashboard, api
+from app.routes import home, dashboard, api, redirect
 from app.db import init_db
 from app.utils import filters
 
@@ -12,9 +12,9 @@ def create_app(test_config=None):
     app.jinja_env.filters['format_date'] = filters.format_date
     app.jinja_env.filters['format_plural'] = filters.format_plural
     
-    @app.route('/hello')
-    def hello():
-        return 'hello world'
+    @app.route('/')
+    def index():
+        return redirect('/home')
     
     # register routes
     app.register_blueprint(home)
