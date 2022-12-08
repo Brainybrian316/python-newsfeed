@@ -1,3 +1,0 @@
-# set up Procfile for python
-
-web: gunicorn -w 4 "app:create_app()" -t 120
