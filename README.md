@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to my first Python app👋</h1>
+<h1 align="center">Welcome to Python News Feed👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/Brainybrian316/python-newsfeed#readme" target="_blank">
@@ -30,6 +30,10 @@
 ## Demo of Project
 
 ### ✨ [Live Site](https://cc-java-api-brian.herokuapp.com/)
+
+
+### 🏠 Application Homepage
+<img width="1438" alt="Screenshot 2023-01-04 at 12 50 09 PM" src="https://user-images.githubusercontent.com/99369106/210618574-bbedf634-8046-4651-b529-ff82911f8c3c.png">
 
 ## Usage
 
